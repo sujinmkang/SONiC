@@ -183,6 +183,7 @@ Please note that all the parameters listed in the following table are mandatory.
 | address                 | hexstr   | Vendor specific, typically a hex based address            |
 | lib_name                | string   | FQN to shared object .so file                             |
 | firmware_path           | string   | FQN to firmware .bin file                                 |
+| hwinfo                  | string   | FQN to interface_name+"/"+phy_id
 | config_file             | string   | FQN to PHY config .json file                              |
 | sai_init_config_file    | string   | FQN to SAI initialization file                            |
 | phy_access              | string   | "mdio", "i2c", or "cpld" ("" - not currently implemented) |
@@ -255,6 +256,7 @@ redis-dump -d 0 -k "_GEARBOX_TABLE:phy:0" -y
       "bus_id": "0",
       "config_file": "/usr/share/sonic/hwsku/sesto-1.json",
       "firmware_path": "/tmp/phy-sesto-1.bin",
+      "hwinfo": "phy0/0",
       "lib_name": "libsai_phy_sesto-1.so",
       "name": "sesto-1",
       "phy_access": "",
